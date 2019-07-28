@@ -1,0 +1,267 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    --theme-color: #8b0000
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.movie-tile {
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 500ms ease-out;
+    margin-bottom: 30px;
+    height:500px;
+    border: 1px solid #ddd;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+    .movie-tile:hover {
+        box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.2);
+    }
+
+        .movie-tile:hover .image-overlay {
+            opacity: 0.7;
+        }
+
+        .movie-tile:hover .view-details {
+            opacity: 1;
+            width: 152px;
+            font-size: 15px;
+            margin-left: -75px;
+            top: 35%;
+            transition: all 200ms ease-out;
+        }
+
+        .movie-tile:hover .remove {
+            opacity: 1;
+            width: 30px;
+            font-size: 15px;
+            top: 30px;
+            transition: all 200ms ease-out;
+        }
+
+    .movie-tile img {
+        width: 100%;
+    }
+
+    .movie-tile.compare .image-overlay {
+        opacity: 0.7;
+    }
+
+    .movie-tile .stats-container {
+        background: #fff;
+        padding: 25px 15px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+        .movie-tile .stats-container .movie-tile-title {
+            font-size: 18px;
+            color: var(--theme-color);
+            font-weight:600 
+        }
+
+        .movie-tile .stats-container p {
+            font-size: 16px;
+            color: #b1b1b3;
+            margin: 0;
+        }
+
+
+        .movie-tile .stats-container .movie-tile-stats {
+            display:block;
+        }
+
+            .movie-tile .stats-container .movie-tile-stats .label-description {
+                font-weight:100;
+                font-size: small;
+                color:#808080;
+            }
+
+            .movie-tile .stats-container .movie-tile-stats .label-value {
+                font-weight: 400;
+                font-size: medium;
+                color: var(--theme-color);
+            }
+
+            .movie-tile .stats-container .movie-tile-stats movie-tile-title {
+                font-weight: 600;
+                color: var(--theme-color)
+            }
+
+    .movie-tile .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--theme-color);
+        opacity: 0;
+        transition: all 200ms ease-out;
+    }
+
+    .movie-tile .view-details {
+        position: absolute;
+        top: 112px;
+        left: 50%;
+        margin-left: -85px;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 10px 0;
+        width: 172px;
+        opacity: 0;
+        transition: all 200ms ease-out;
+    }
+
+        .movie-tile .view-details:hover {
+            background: #fff;
+            color: var(--theme-color);
+            cursor: pointer;
+        }
+
+.movie-tile .remove {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    content: "X";
+    text-align: center;
+    vertical-align: middle;
+    font-size: 19px;
+    width: 40px;
+    opacity: 0;
+    transition: all 200ms ease-out;
+}
+
+    .movie-tile .remove:hover {
+        background: #fff;
+        color: var(--theme-color);
+        cursor: pointer;
+    }
+
+.add-button {
+    padding: 15px;
+    background-color: var(--theme-color);
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    color: white;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10;
+    font-size: 45px;
+    line-height:22px;
+    font-weight: 700;
+    opacity:0.3;
+    cursor:pointer;
+}
+.add-button:hover{
+    opacity:1;
+}
+.add-button a{
+    text-decoration:none;
+}
+
+/* Style the search field */
+form.search{
+    width:100%;
+}
+
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: var(--theme-color);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+    form.search button:hover {
+        background: #d90019;
+    }
+
+/* Clear floats */
+form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+}

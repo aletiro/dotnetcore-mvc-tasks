@@ -1,0 +1,48 @@
+﻿@model Movie
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="col-sm-6 col-md-3">
+    <div class="movie-tile">
+        <div><img src=@Model.Image alt={@Model.Title} /></div>
+        <div class="image-overlay">
+
+        </div>
+        <a href="@Url.Action("Edit", "Movies", new { id = Model.Id })">
+            <div class="view-details">
+                Edit
+            </div>
+        </a>
+        <a href="@Url.Action("Delete", "Movies", new { id = Model.Id })">
+            <div class="remove">
+                X
+            </div>
+        </a>
+        <div class="stats">
+            <div class="stats-container">
+                @*<span class="label-description">@Html.DisplayNameFor(x => x.Director): </span><span class="movie-director">@Html.DisplayFor(x => x.Director)</span>*@<span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span><span class="label-description"></span><span class="movie-director"></span>
+                @*<span class="label-description">@Html.DisplayNameFor(x => x.Actors): </span><span class="movie-actors">@Html.DisplayFor(x => x.Actors)</span>*@<span class="label-description"></span><span class="movie-actors"></span><span class="label-description"></span><span class="movie-actors"></span><span class="label-description"></span><span class="movie-actors"></span><span class="label-description"></span><span class="movie-actors"></span><span class="label-description"></span><span class="movie-actors"></span><span class="label-description"></span><span class="movie-actors"></span><span class="label-description"></span><span class="movie-actors"></span>
+                <div class="movie-tile-stats"><span class="movie-tile-title">@Model.Title (@Model.Year)</span></div>
+                <div class="movie-tile-stats">
+                    <span class="label-description">@Html.DisplayNameFor(x => x.Director): </span>
+                    <span class="label-value">@Html.DisplayFor(x => x.Director)</span>
+                </div>
+                <div class="movie-tile-stats">
+                    <span class="label-description">@Html.DisplayNameFor(x => x.Actors): </span>
+                    <span class="label-value">@Html.DisplayFor(x => x.Actors)</span>
+                </div>
+            </div>
+        </div>
+        @*<div class="movie-tile-footer">
+                <span class="label-description">@Html.DisplayNameFor(x => x.Director): </span><span class="movie-director">@Html.DisplayFor(x => x.Director)</span>
+            </div>*@<div class="movie-tile-footer">
+            <span class="label-description"></span><span class="movie-director"></span>
+        </div><div class="movie-tile-footer">
+            <span class="label-description"></span><span class="movie-director"></span>
+        </div><div class="movie-tile-footer">
+            <span class="label-description"></span><span class="movie-director"></span>
+        </div><div class="movie-tile-footer">
+            <span class="label-description"></span><span class="movie-director"></span>
+        </div>
+    </div>
+</div>

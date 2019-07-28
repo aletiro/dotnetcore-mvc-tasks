@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MongoDbMovies.Models.Movie>
+
+@{
+    ViewData["Title"] = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Movies</h1>
+
+<p>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+</p>
+
+<div class="row mt-3">
+    <form asp-action="Search" class="search">
+        <div class="col-md-12">
+            <input type="text" placeholder="Search by Actors, Director or Movie Title" name="search">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+</div>
+<div class="row mt-3">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_MovieTilePartial", item);
+    }
+</div>
+
+<a href=@Url.Action("Create", "Movies")>
+    <div class="add-button">+</div>
+</a>
